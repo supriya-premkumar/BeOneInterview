@@ -30,7 +30,7 @@ Expand only after that slice works.
 
 ## Code Standards
 
-- Python 3.12+. Type hints on public functions.
+- Python 3.9+. Type hints on public functions.
 - SQLite unless I say otherwise. Parameterized queries only.
 - `openpyxl` for Excel. `pandas` only if I approve it.
 - Small functions. Clear names. No ORMs. No frameworks unless I ask.
