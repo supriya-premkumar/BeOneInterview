@@ -1,7 +1,7 @@
 PYTHON := .venv/bin/python
 PIP := .venv/bin/pip
 
-.PHONY: venv install check test
+.PHONY: venv install check test run
 
 venv:
 	python3 -m venv .venv
@@ -13,4 +13,7 @@ check:
 	$(PYTHON) -c "import openpyxl, pytest; print('openpyxl', openpyxl.__version__); print('pytest', pytest.__version__)"
 
 test:
-	$(PYTHON) -m pytest
+	$(PYTHON) -m pytest -q tests
+
+run:
+	$(PYTHON) -m task_manager.api.main
